@@ -1,6 +1,9 @@
 package xadres.chess;
 
 import xadres.application.bordgame.Board;
+import xadres.application.bordgame.Position;
+import xadres.chess.pieces.King;
+import xadres.chess.pieces.Rook;
 
 public class ChessMathc {
 
@@ -8,6 +11,7 @@ public class ChessMathc {
 
 	public ChessMathc() {
 		board = new Board(8, 8);
+		initialSetup();
 	}
 
 	public ChessPiece[][] getPieces() {
@@ -19,4 +23,10 @@ public class ChessMathc {
 		}
 		return mat;
 	}
+	
+	private void initialSetup() {
+		board.placePiece(new Rook(board, Color.WHITH), new Position(2, 1));
+		board.placePiece(new King(board, Color.WHITH), new Position(3, 4));
+	}
+	
 }
