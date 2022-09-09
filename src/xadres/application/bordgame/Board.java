@@ -33,6 +33,13 @@ public class Board {
 		this.columns = columns;
 	}
 	
-	
+	//pega as peças
+	public Piece piece(int row, int column) {
+		return pieces [row][column];
+	}
 
+	//pega a posição das peças
+	public Piece piece(Position position) {
+		return pieces [position.getRow()][position.getColomn()];
+	}
 }
