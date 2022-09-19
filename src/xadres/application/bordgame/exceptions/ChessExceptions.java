@@ -1,6 +1,6 @@
 package xadres.application.bordgame.exceptions;
 
-public class ChessExceptions extends RuntimeException{
+public class ChessExceptions extends BoardException{
 	private static final long serialVersionUID = 1L;
 
 	public ChessExceptions (String msg) {
